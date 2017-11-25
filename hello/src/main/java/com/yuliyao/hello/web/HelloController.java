@@ -26,7 +26,7 @@ public class HelloController {
     @RequestMapping("/hello")
     public String hello() {
         //自定义访问次数统计，可访问/metrics查看
-        counterService.increment("didispace.hello.count");
+//        counterService.increment("didispace.hello.count");
 
         ServiceInstance serviceInstance = client.getLocalServiceInstance();
         logger.info("/hello,host:{},service_id:{}", serviceInstance.getHost(), serviceInstance.getPort());
